@@ -11,11 +11,10 @@ public class Principal {
 		
 		calIni.set(2019, 5, 7, 8, 15, 0);
 		calFim.set(2019, 5, 7, 14, 20, 0);
-		
-		CalculoValor cv = null;
+
 		Long dif = calFim.getTimeInMillis() - calIni.getTimeInMillis();
-		
-		cv = new CalculoFactory().build(dif);
+
+		CalculoValor cv = new CalculoFactory().build(dif);
 		cv.calcular(dif);
 
 	}
