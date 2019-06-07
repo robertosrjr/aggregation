@@ -2,5 +2,5 @@ package com.gmail.robertosrjr;
 
 public interface CalculoValor {
 	
-	void calcular();
+	void calcular(Long tempo);
 }

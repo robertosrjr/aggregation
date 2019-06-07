@@ -10,11 +10,13 @@ public class Principal {
 		Calendar calFim = Calendar.getInstance();
 		
 		calIni.set(2019, 5, 7, 8, 15, 0);
-		calFim.set(2019, 5, 7, 9, 50, 0);
+		calFim.set(2019, 5, 7, 14, 20, 0);
 		
-		CalculoValor cv = new CalculoFactory().build(calIni, calFim);
-
-		cv.calcular();
+		CalculoValor cv = null;
+		Long dif = calFim.getTimeInMillis() - calIni.getTimeInMillis();
+		
+		cv = new CalculoFactory().build(dif);
+		cv.calcular(dif);
 
 	}
 }
